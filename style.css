@@ -1,0 +1,133 @@
+body {
+  background: #007991;
+  background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+  background: linear-gradient(to right, #78ffd6, #007991);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0px;
+}
+.panels {
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+}
+.panel {
+  height: 100%;
+  border-radius: 30px;
+  flex: 1;
+  background: #dce35b;
+  background: -webkit-linear-gradient(to right, #45b649, #dce35b);
+  background: linear-gradient(to right, #45b649, #dce35b);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: flex 0.7s ease-in;
+}
+.panel > * {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  font-size: 1.5rem;
+  color: white;
+  text-align: justify;
+  display: none;
+}
+.panel > div {
+  padding: 30px;
+}
+.panel.active {
+  flex: 4;
+}
+.panel.active > * {
+  opacity: 1;
+  display: block;
+}
+.panel.active > .panelTitle {
+  opacity: 0;
+}
+.panelTitle {
+  opacity: 1;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: 800;
+  top: 50%;
+  transition: opacity 0.7s ease-in;
+}
+.home img {
+  width: 30%;
+  border-radius: 50%;
+}
+/*skills*/
+.skills {
+  flex-direction: row;
+}
+.skills img {
+  width: 20%;
+}
+/* Projects*/
+.projects {
+  overflow-y: scroll;
+  justify-content: flex-start;
+}
+.projects::-webkit-scrollbar {
+  display: none;
+}
+.projects ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.projects img {
+  width: 40%;
+  margin-right: 10px;
+}
+/* icons*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa-github {
+  background: black;
+  color: white;
+}
+
+@media (min-height: 500px) and(max-width: 1100px) {
+  .panels > * {
+    font-size: 15px;
+    background-color: violet;
+  }
+  .panelTitle {
+    font-size: 1rem;
+  }
+}
+@media (min-height: 0px) and(max-width: 500px) {
+  .panels {
+    flex-direction: column;
+  }
+}
