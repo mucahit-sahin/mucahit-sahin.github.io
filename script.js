@@ -1,3 +1,4 @@
+//panel open - close
 const panels = document.querySelectorAll(".panel");
 
 panels.forEach((panel) => {
@@ -12,7 +13,7 @@ function panelClose() {
     panel.classList.remove("active");
   });
 }
-
+// list projects
 const projects = document.querySelector(".projects ul");
 const projectsData = [
   {
@@ -58,3 +59,21 @@ projectsData.map((project) => {
 });
 
 projects.appendChild(list);
+
+//home write text animation
+
+var homespan = document.querySelector(".biospan");
+var hometext =
+  "Merhabalar ben Mücahit. Siteme Hoşgeldin. Lisede tanıştığım yazılım alanıma olan tutkum Bilgisayar Mühendisliğini kazanmamla devam etti. Şuan da son sınıftayım. Mobil ve Web Programlama ile ilgilenmekte ve projeler geliştirmekteyim.";
+var homeindex = 0;
+var currentText = [];
+
+function writeHomespan() {
+  console.log(homeindex);
+  currentText.push(hometext[homeindex]);
+  homespan.innerHTML = currentText.join("");
+  homeindex++;
+  if (hometext.length == homeindex) return;
+  setTimeout(writeHomespan, 50);
+}
+writeHomespan();
