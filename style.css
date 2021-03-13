@@ -98,6 +98,7 @@ body {
   background: rgb(180, 223, 91);
   border-radius: 30px;
   padding: 15px;
+  transition: opacity 0.3s ease-in;
 }
 .projects ul li:hover {
   opacity: 0.6;
