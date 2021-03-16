@@ -28,6 +28,11 @@ const projectsData = [
     link: "https://react-netflix-clone-9dfa3.web.app/",
   },
   {
+    img: "",
+    name: "Github Profile - Repositories",
+    link: "https://github-profile-repository.vercel.app",
+  },
+  {
     img:
       "https://github.com/mucahit-sahin/trendyolNavbar-vanillaJS/raw/master/img/image.png",
     name: "Trendyol Navbar",
@@ -69,7 +74,6 @@ var homeindex = 0;
 var currentText = [];
 
 function writeHomespan() {
-  console.log(homeindex);
   currentText.push(hometext[homeindex]);
   homespan.innerHTML = currentText.join("");
   homeindex++;
