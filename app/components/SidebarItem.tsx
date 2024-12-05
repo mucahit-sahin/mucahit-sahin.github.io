@@ -3,14 +3,13 @@ import Link from "next/link";
 function SidebarItem({
   text,
   href,
-  active,
   Icon,
 }: {
   text: string;
   href: string;
-  active?: boolean;
   Icon: React.ElementType;
 }) {
+  const active = false;
   return (
     <Link
       href={href}
@@ -29,5 +28,4 @@ function SidebarItem({
     </Link>
   );
 }
-//veya işareti = || ile değiştirilebilir
 export default SidebarItem;

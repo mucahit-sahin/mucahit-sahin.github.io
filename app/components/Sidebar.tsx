@@ -5,9 +5,9 @@ import { MdContactMail, MdBookmarks } from "react-icons/md";
 
 export default function Sidebar() {
   return (
-    <div className="flex-2 px-5 flex flex-col min-h-screen ">
+    <div className="flex-[1_1_25%] px-5 flex flex-col min-h-screen ">
       <FaGithub size={30} className="mt-3 ml-5 mb-5" />
-      <SidebarItem href="/" text="Profile" Icon={FaUser} active />
+      <SidebarItem href="/" text="Profile" Icon={FaUser} />
       <SidebarItem href="/projects" text="Projects" Icon={GrProjects} />
       <SidebarItem href="/posts" text="Posts" Icon={FaUser} />
       <SidebarItem href="/contact" text="Contact" Icon={MdContactMail} />
