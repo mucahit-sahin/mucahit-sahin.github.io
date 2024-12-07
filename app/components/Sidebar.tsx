@@ -7,7 +7,7 @@ import { BsPostcard } from "react-icons/bs";
 
 export default function Sidebar() {
   return (
-    <div className="flex-[1_1_25%] px-5 flex flex-col min-h-screen">
+    <div className="flex-[1_1_25%] px-5 flex flex-col min-h-screen border-r-[0.5px] border-gray-400">
       <FaGithub size={30} className="mt-3 ml-5 mb-5" />
       <SidebarItem href="/" text="Profile" Icon={FaUser} />
       <SidebarItem href="/projects" text="Projects" Icon={GrProjects} />
