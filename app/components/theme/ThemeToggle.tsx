@@ -1,7 +1,17 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { IoMdMoon, IoMdSunny } from "react-icons/io";
+import dynamic from "next/dynamic";
+
+// İkonu dinamik olarak içe aktarın ve SSR'ı devre dışı bırakın
+const IoMdSunny = dynamic(
+  () => import("react-icons/io").then((mod) => mod.IoMdSunny),
+  { ssr: false }
+);
+const IoMdMoon = dynamic(
+  () => import("react-icons/io").then((mod) => mod.IoMdMoon),
+  { ssr: false }
+);
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
